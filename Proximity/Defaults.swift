@@ -96,14 +96,14 @@ class Defaults {
 
 	static func getGeofenceRegion() -> CLRegion? {
 		if let unarchivedObject = UserDefaults.standard.object(forKey: Keys.getGeofenceRegion.value) as? Data {
-			return NSKeyedUnarchiver.unarchiveObject(with: unarchivedObject as Data) as? CLRegion
+			return try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(unarchivedObject as Data) as? CLRegion
 		}
 		return nil
 	}
 
 	static func set(getGeofenceRegion: CLRegion?){
 		if let origin = getGeofenceRegion {
-			let archive = try NSKeyedArchiver.archivedData(withRootObject: origin as CLRegion, requiringSecureCoding: true) as NSData
+			let archive =  try? NSKeyedArchiver.archivedData(withRootObject: origin as CLRegion, requiringSecureCoding: true) as NSData
 			UserDefaults.standard.set(archive , forKey: Keys.getGeofenceRegion.value)
 		}
 		else {
