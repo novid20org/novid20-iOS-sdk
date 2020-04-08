@@ -73,7 +73,6 @@ extension ProximityService: LocationServiceDelegate {
 
 	func didUpdateLocation(){
 		//centralManager.startScanning()
-
 		//startBoradcasting(isPeripheralMode: self.isPeripheralMode)
 	}
 

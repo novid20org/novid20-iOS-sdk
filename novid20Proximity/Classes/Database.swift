@@ -13,11 +13,7 @@ import CoreLocation
 public class Database {
 
 	public static var shared = Database()
-    public weak var bleFetchedResultsControllerDelegate: NSFetchedResultsControllerDelegate?{
-		didSet{
-			print(bleFetchedResultsControllerDelegate)
-		}
-	}
+    public weak var bleFetchedResultsControllerDelegate: NSFetchedResultsControllerDelegate?
     public weak var locationFetchedResultsControllerDelegate: NSFetchedResultsControllerDelegate?
 
 	/* 	maximum interval allowed for the data to be presisted.
@@ -35,6 +31,7 @@ public class Database {
 	}
 
 
+	//MARK:- PersistentContainer
 	class TriggerPersistentContainer: NSPersistentContainer {
 	   override open class func defaultDirectoryURL() -> URL {
 		 let urlForApplicationSupportDirectory = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
@@ -74,87 +71,8 @@ public class Database {
 
 	  return container
 	}()
-
-
-	internal func store(peripheral:Peripheral) {
-		guard let context = managedObjectContext else { return}
-
-		let entity = NSEntityDescription.entity(forEntityName: "DetectedBLE", in: context)
-		let newUser = NSManagedObject(entity: entity!, insertInto: context)
-
-        newUser.setValue(peripheral.userID, forKey: "userID")
-        newUser.setValue(peripheral.createdAt, forKey: "timestamp")
-		newUser.setValue(peripheral.createdAt.timeIntervalSince1970, forKey: "interactionStarted")
-        newUser.setValue(peripheral.distance, forKey: "distance")
-        newUser.setValue(peripheral.rssi, forKey: "rssi")
-
-		var background = true
-		if peripheral.appState == .foreground{
-			background = false
-		}
-		newUser.setValue(background, forKey: "isBackground")
-
-		do {
-		   try context.save()
-			print("Added \(peripheral.userID) to DB")
-		  } catch {
-		   print("Failed saving")
-		}
-	}
-
-	internal func update(peripheral:Peripheral) {
-
-		guard let context = managedObjectContext else { return}
-
-
-		let fetchrequest = NSFetchRequest<NSFetchRequestResult>(entityName: "DetectedBLE")
-		fetchrequest.predicate = NSPredicate(format: "userID = %@ AND isValid = false AND interactionStarted = %lf", peripheral.userID, peripheral.createdAt.timeIntervalSince1970)
-		do {
-			let result = try? context.fetch(fetchrequest)
-			guard let objectUpdate = result?.first as? DetectedBLE else {return}
-			objectUpdate.setValue(peripheral.date.timeIntervalSince1970, forKey: "interactionEnded")
-			objectUpdate.setValue(peripheral.date.timeIntervalSince(peripheral.createdAt), forKey: "duration")
-			objectUpdate.setValue(true, forKey: "isValid")
-
-			if peripheral.distance < objectUpdate.distance {
-				objectUpdate.setValue(peripheral.distance, forKey: "distance")
-			}
-
-			if peripheral.rssi < objectUpdate.rssi {
-				objectUpdate.setValue(peripheral.rssi, forKey: "rssi")
-			}
-
-			try context.save()
-			print("Disconnected from \(peripheral.userID), with duration: \(peripheral.date.timeIntervalSince(peripheral.createdAt)) sec")
-		} catch {
-			print("Failed saving")
-		}
-
-	}
     
-//    public func fetchBLEConnectoins() -> [InfectedUser]? {
-//
-//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//        let context = appDelegate.persistentContainer.viewContext
-//
-//        // Create a fetch request for the Quake entity sorted by time.
-//        let fetchRequest = NSFetchRequest<DetectedBLE>(entityName: "DetectedBLE")
-//        // fetchRequest.sortDescriptors = [NSSortDescriptor(key: "timestamp", ascending: false)]
-//        
-//        do {
-//            let result = try context.fetch(fetchRequest)
-//            let connections = result.map {
-//                InfectedUser(bleEntity: $0)
-//            }
-//            return connections
-//            // return combineDurationOfConnections(contacts: connections)
-//        } catch {
-//            print("Failed loading ble connections")
-//            return nil
-//        }
-//        
-//    }
-    
+
 //    private func combineDurationOfConnections(contacts: [InfectedUser]) -> [InfectedUser] {
 //
 //        var reducedConnection: [InfectedUser] = []
@@ -176,11 +94,11 @@ public class Database {
 //                reducedConnection.append(combinedInfected)
 //            }
 //        }
-//
+//x
 //        return reducedConnection
 //    }
 
-	internal func cleanUnClosedDetections(now: Bool = false) {
+	public func cleanUnClosedDetections(now: Bool = false) {
 
 		guard let context = managedObjectContext else { return}
 
@@ -217,30 +135,34 @@ public class Database {
 
 	}
     
-    internal func deleteOldBLEConnections() {
-
+     //MARK:- ADD
+	internal func store(peripheral:Peripheral) {
 		guard let context = managedObjectContext else { return}
 
+		let entity = NSEntityDescription.entity(forEntityName: "DetectedBLE", in: context)
+		let newUser = NSManagedObject(entity: entity!, insertInto: context)
 
-        let fetchRequest = NSFetchRequest<DetectedBLE>(entityName: "DetectedBLE")
-        
-        let calendar = Calendar.current
-        let date = calendar.date(byAdding: .hour, value: collectedDataTimeLimit, to: Date())!
-        
-        fetchRequest.predicate = NSPredicate(format: "timestamp < %@", date as NSDate)
-        
-        do {
-            let result = try context.fetch(fetchRequest)
-            result.forEach { (connection) in
-                context.delete(connection)
-            }
-        } catch {
-            print("Failed deleting old connections")
-        }
-        
-    }
-    
-    // - MARK: Location storage
+        newUser.setValue(peripheral.userID, forKey: "userID")
+        newUser.setValue(peripheral.createdAt, forKey: "timestamp")
+		newUser.setValue(peripheral.createdAt.timeIntervalSince1970, forKey: "interactionStarted")
+        newUser.setValue(peripheral.distance, forKey: "distance")
+        newUser.setValue(peripheral.rssi, forKey: "rssi")
+
+		var background = true
+		if peripheral.appState == .foreground{
+			background = false
+		}
+		newUser.setValue(background, forKey: "isBackground")
+
+		do {
+		   try context.save()
+			print("Added \(peripheral.userID) to DB")
+		  } catch {
+		   print("Failed saving")
+		}
+	}
+
+
     internal func storeLocation(location: CLLocation) {
    		guard let context = managedObjectContext else { return}
 
@@ -258,8 +180,64 @@ public class Database {
            print("Failed saving location")
         }
     }
-    
-    internal func fetchLocations() -> [CLLocation]? {
+
+	//MARK:- UPDATE
+	internal func update(peripheral:Peripheral) {
+
+		guard let context = managedObjectContext else { return}
+
+
+		let fetchrequest = NSFetchRequest<NSFetchRequestResult>(entityName: "DetectedBLE")
+		fetchrequest.predicate = NSPredicate(format: "userID = %@ AND isValid = false AND interactionStarted = %lf", peripheral.userID, peripheral.createdAt.timeIntervalSince1970)
+		do {
+			let result = try? context.fetch(fetchrequest)
+			guard let objectUpdate = result?.first as? DetectedBLE else {return}
+			objectUpdate.setValue(peripheral.date.timeIntervalSince1970, forKey: "interactionEnded")
+			objectUpdate.setValue(peripheral.date.timeIntervalSince(peripheral.createdAt), forKey: "duration")
+			objectUpdate.setValue(true, forKey: "isValid")
+
+			if peripheral.distance < objectUpdate.distance {
+				objectUpdate.setValue(peripheral.distance, forKey: "distance")
+			}
+
+			if peripheral.rssi < objectUpdate.rssi {
+				objectUpdate.setValue(peripheral.rssi, forKey: "rssi")
+			}
+
+			try context.save()
+			print("Disconnected from \(peripheral.userID), with duration: \(peripheral.date.timeIntervalSince(peripheral.createdAt)) sec")
+		} catch {
+			print("Failed saving")
+		}
+
+	}
+
+	//MARK:- GET
+
+	public func fetchBLEConnectoins() -> [DetectedContact]? {
+
+		   guard let context = managedObjectContext else {return []}
+
+		   // Create a fetch request for the Quake entity sorted by time.
+		   let fetchRequest = NSFetchRequest<DetectedBLE>(entityName: "DetectedBLE")
+		   // fetchRequest.sortDescriptors = [NSSortDescriptor(key: "timestamp", ascending: false)]
+
+		   do {
+			   let result = try context.fetch(fetchRequest)
+			   let connections = result.map {
+				   DetectedContact(bleEntity: $0)
+			   }
+			   return connections
+			   // return combineDurationOfConnections(contacts: connections)
+		   } catch {
+			   print("Failed loading ble connections")
+			   return nil
+		   }
+
+	   }
+
+
+    public func fetchLocations() -> [CLLocation]? {
 
 		guard let context = managedObjectContext else { return []}
 
@@ -280,8 +258,32 @@ public class Database {
         }
         
     }
-    
-    internal func deleteOldLocations() {
+
+	//MARK:- DELETE
+    public func deleteOldBLEConnections() {
+
+		guard let context = managedObjectContext else { return}
+
+
+        let fetchRequest = NSFetchRequest<DetectedBLE>(entityName: "DetectedBLE")
+
+        let calendar = Calendar.current
+        let date = calendar.date(byAdding: .hour, value: collectedDataTimeLimit, to: Date())!
+
+        fetchRequest.predicate = NSPredicate(format: "timestamp < %@", date as NSDate)
+
+        do {
+            let result = try context.fetch(fetchRequest)
+            result.forEach { (connection) in
+                context.delete(connection)
+            }
+        } catch {
+            print("Failed deleting old connections")
+        }
+
+    }
+
+	public func deleteOldLocations() {
 
 		guard let context = managedObjectContext else { return}
 
@@ -304,7 +306,7 @@ public class Database {
         
     }
 
-    internal func deleteAllData() {
+	public func deleteAllData() {
 
    		guard let context = managedObjectContext else { return}
 
@@ -324,7 +326,8 @@ public class Database {
         }
     }
 
-        
+
+	//MARK:- FetchedResultsController
     public lazy var locationFetchedResultsController: NSFetchedResultsController<UserLocation> = {
 
   		guard let context = managedObjectContext else { {preconditionFailure("failed")}()}

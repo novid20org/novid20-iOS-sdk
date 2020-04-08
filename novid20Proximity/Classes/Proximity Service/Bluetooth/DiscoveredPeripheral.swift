@@ -12,6 +12,27 @@ public enum AppState: String {
 	case foreground = "active", background = "passive"
 }
 
+public struct DetectedContact {
+    public var userId: String?
+    public var timestamp: Int?
+    public var duration: Int64?
+	public var distance: Double?
+	public var rssi: Double?
+	public var isBackground: Bool?
+
+    init(bleEntity: DetectedBLE) {
+        userId = bleEntity.userID
+        if let date = bleEntity.timestamp {
+            timestamp = Int(date.timeIntervalSince1970)
+        }
+		distance = bleEntity.distance
+        duration = bleEntity.duration
+        rssi = bleEntity.rssi
+		isBackground = bleEntity.isBackground
+    }
+}
+
+
 public class Peripheral {
 
 	let createdAt: Date = Date()

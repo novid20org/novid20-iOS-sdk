@@ -31,12 +31,14 @@ class CentralManager: NSObject {
 	let database = Database()
 	var appState: AppState = .background
 
+	//MARK:- init
+	
 	override init() {
 		super.init()
 		database.cleanUnClosedDetections()
-		NotificationCenter.default.addObserver(self, selector: #selector(willResignActive), name: NSNotification.Name.UIApplicationWillResignActive, object: nil)
+		NotificationCenter.default.addObserver(self, selector: #selector(willResignActive), name: UIApplication.willResignActiveNotification, object: nil)
 
-		NotificationCenter.default.addObserver(self, selector: #selector(didBecomeActive), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
+		NotificationCenter.default.addObserver(self, selector: #selector(didBecomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
 
 		DispatchQueue.main.async {
 			if UIApplication.shared.applicationState == .active {
@@ -49,6 +51,7 @@ class CentralManager: NSObject {
 		NotificationCenter.default.removeObserver(self)
 	}
 
+	//MARK:- App State
 	@objc func didBecomeActive() {
 		appState = .foreground
 	}
@@ -57,6 +60,7 @@ class CentralManager: NSObject {
 		appState = .background
 	}
 
+	//MARK:- Services
 	func startScanning(){
 		centralManager = CBCentralManager(delegate: self, queue: nil)//centralManagerQueue //ble peripheral listener
 		setupDiscoveryExpiryValidator()
@@ -77,6 +81,8 @@ class CentralManager: NSObject {
 		peripherals = []
 	}
 
+
+	//MARK:- Internal
 	private func scan(){
 		print("startScanning")
 		centralManager.stopScan()

@@ -14,7 +14,6 @@ let BleExpiryThreshold = 15.0
 
 class PeripheralManager: NSObject {
 
-
     var peripheralManager: CBPeripheralManager!
     var region: CLBeaconRegion!
 	var userID: String = "No user id set"
