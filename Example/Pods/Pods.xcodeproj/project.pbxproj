@@ -50,7 +50,7 @@
 /* Begin PBXFileReference section */
 		0661FBDC5312A237539CE78E03CACCF7 /* Proximity.xcdatamodel */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcdatamodel; path = Proximity.xcdatamodel; sourceTree = "<group>"; };
 		08EA5DE53D7C30218713B33204A351BA /* Pods-novid20Proximity_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-novid20Proximity_Tests-umbrella.h"; sourceTree = "<group>"; };
-		09AE986EA54726AF1771AD1F3E200E05 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		09AE986EA54726AF1771AD1F3E200E05 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		11F372F0D1F74AE7B6F01D1436221861 /* Pods-novid20Proximity_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-novid20Proximity_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		17D400551B744C26FEBF8F891A503DAA /* novid20Proximity.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = novid20Proximity.modulemap; sourceTree = "<group>"; };
 		19A5B1B83A2A4DF48060D54FC74E3AD6 /* DiscoveredPeripheral.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DiscoveredPeripheral.swift; sourceTree = "<group>"; };
@@ -59,13 +59,13 @@
 		23E0101E6614AF9C79BC940D2148F9FC /* Pods-novid20Proximity_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-novid20Proximity_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		2B17BC8C59A0BDE08335B70419E7C85B /* Pods-novid20Proximity_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-novid20Proximity_Example-Info.plist"; sourceTree = "<group>"; };
 		39169137A63479F2B454403F3D194136 /* novid20Proximity-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "novid20Proximity-Info.plist"; sourceTree = "<group>"; };
-		3E3FA1E745E4F2F23E6255B5C04E361C /* Pods_novid20Proximity_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_novid20Proximity_Tests.framework; path = "Pods-novid20Proximity_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E3FA1E745E4F2F23E6255B5C04E361C /* Pods_novid20Proximity_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_novid20Proximity_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		40012BC35C72F7DB3E7F8E821D328016 /* Pods-novid20Proximity_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-novid20Proximity_Tests-Info.plist"; sourceTree = "<group>"; };
 		420F897114A9176D3681CA864C38D496 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		49132E46604B86B6D18A5CED3EEACBEB /* PeripheralManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PeripheralManager.swift; sourceTree = "<group>"; };
 		49A981A8D39ADE11D67E074508974F53 /* Pods-novid20Proximity_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-novid20Proximity_Example.modulemap"; sourceTree = "<group>"; };
-		4B89610A532928B7CB9FCB5AC457BF41 /* Pods_novid20Proximity_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_novid20Proximity_Example.framework; path = "Pods-novid20Proximity_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5320E2F8568F45C1C28507ACD867599C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		4B89610A532928B7CB9FCB5AC457BF41 /* Pods_novid20Proximity_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_novid20Proximity_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5320E2F8568F45C1C28507ACD867599C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5894BE86BED06DAB16D7CA2CA39A0891 /* Coredata.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Coredata.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Coredata.framework; sourceTree = DEVELOPER_DIR; };
 		5A1B5A27C10A49DDD2AD4022B742B214 /* Pods-novid20Proximity_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-novid20Proximity_Example.release.xcconfig"; sourceTree = "<group>"; };
 		66A233C4985AEE3A687F001D760282EE /* Pods-novid20Proximity_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-novid20Proximity_Example-frameworks.sh"; sourceTree = "<group>"; };
@@ -79,18 +79,18 @@
 		8EE5BE61FFDF05C95F0C6CB3776CF4F8 /* Database.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Database.swift; path = novid20Proximity/Classes/Database.swift; sourceTree = "<group>"; };
 		986894C6D30B291AF139DDEA2CDC6567 /* Pods-novid20Proximity_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-novid20Proximity_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		9C3B43C41746B0DC0AFED0E9C2FA81E5 /* novid20Proximity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = novid20Proximity.release.xcconfig; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A3C41CF7127DF774B55FB9BBF381EFF4 /* Pods-novid20Proximity_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-novid20Proximity_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A43D51F5F094FB3666710DCBEBDF034E /* Pods-novid20Proximity_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-novid20Proximity_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		AB35B9E49182A2056A20FCDCDC912A7D /* Pods-novid20Proximity_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-novid20Proximity_Example-umbrella.h"; sourceTree = "<group>"; };
 		B13F8BB5D4DE42B7534AE4321F9DAA5C /* Pods-novid20Proximity_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-novid20Proximity_Tests-dummy.m"; sourceTree = "<group>"; };
 		B1E421C88B79BD9A9D004A911B1755A5 /* ProximityConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProximityConfig.swift; sourceTree = "<group>"; };
-		BA34349D766CBA50AB7DD0D6148F60A2 /* novid20Proximity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = novid20Proximity.framework; path = novid20Proximity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA34349D766CBA50AB7DD0D6148F60A2 /* novid20Proximity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = novid20Proximity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAD73232F1DF0A6343D64B82AB3DC5D9 /* Defaults.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Defaults.swift; path = novid20Proximity/Classes/Defaults.swift; sourceTree = "<group>"; };
 		CED6F24D855ABDCC401E2BD65B4ED8BC /* novid20Proximity-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "novid20Proximity-dummy.m"; sourceTree = "<group>"; };
 		CF67D0DDAD1A02D5FA797C0DBEBA0070 /* CentralManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CentralManager.swift; sourceTree = "<group>"; };
 		F6CD796216B4C35CF0613CF50009077A /* Pods-novid20Proximity_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-novid20Proximity_Example-dummy.m"; sourceTree = "<group>"; };
-		FBD620D8D553E35D8483A99572DABD09 /* novid20Proximity.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = novid20Proximity.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		FBD620D8D553E35D8483A99572DABD09 /* novid20Proximity.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = novid20Proximity.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		FEAA74212FE04EAA6A7DFFCFD970AA85 /* Pods-novid20Proximity_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-novid20Proximity_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,7 +138,6 @@
 				81010A3C53A7E81DC3559B7710012542 /* LocationService.swift */,
 				8A5D1BA3A86E1A153083023B0662F761 /* SignificantLocationManager.swift */,
 			);
-			name = Location;
 			path = Location;
 			sourceTree = "<group>";
 		};
@@ -269,7 +268,6 @@
 				19A5B1B83A2A4DF48060D54FC74E3AD6 /* DiscoveredPeripheral.swift */,
 				49132E46604B86B6D18A5CED3EEACBEB /* PeripheralManager.swift */,
 			);
-			name = Bluetooth;
 			path = Bluetooth;
 			sourceTree = "<group>";
 		};
@@ -511,7 +509,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -572,8 +570,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -711,7 +708,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

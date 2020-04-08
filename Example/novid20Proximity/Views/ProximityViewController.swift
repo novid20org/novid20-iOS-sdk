@@ -71,11 +71,11 @@ public class ProximityViewController: UIViewController, NSFetchedResultsControll
 
 // MARK: - Table View Data Source
 extension ProximityViewController: UITableViewDelegate, UITableViewDataSource {
-	private func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+	public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
 		return nil
 	}
 
-	private func numberOfSections(in tableView: UITableView) -> Int {
+	public func numberOfSections(in tableView: UITableView) -> Int {
 	   return 1
 	}
 
@@ -131,7 +131,7 @@ extension ProximityViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension ProximityViewController: UITextFieldDelegate {
-	private func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+	public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
 		return true
 	}
