@@ -1,0 +1,13 @@
+use_frameworks!
+
+target 'novid20Proximity_Example' do
+  pod 'novid20Proximity', :path => '../'
+
+  target 'novid20Proximity_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
+
+

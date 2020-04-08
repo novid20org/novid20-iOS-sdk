@@ -1,0 +1,877 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0B91D55F149D0CBBC9C4CF127DEEB303 /* Coredata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5894BE86BED06DAB16D7CA2CA39A0891 /* Coredata.framework */; };
+		29673B523DB2B5038F7642101F408AD4 /* novid20Proximity-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CED6F24D855ABDCC401E2BD65B4ED8BC /* novid20Proximity-dummy.m */; };
+		2A22706D66D5A1B57A654F06C2E9028A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 420F897114A9176D3681CA864C38D496 /* Foundation.framework */; };
+		2D1CA0FC404E5E0914D248E1F9C50C0A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 420F897114A9176D3681CA864C38D496 /* Foundation.framework */; };
+		374AEF2B663526E1907B6D5BC5534D0F /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE5BE61FFDF05C95F0C6CB3776CF4F8 /* Database.swift */; };
+		3B9859FFF8EE85B7E8C52DBD2C9A8BBB /* Proximity.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B0DF051BABB4EE9E9338C73CA4F25DF5 /* Proximity.xcdatamodeld */; };
+		45898C0FC40C44198649E211E0D1551F /* Pods-novid20Proximity_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 08EA5DE53D7C30218713B33204A351BA /* Pods-novid20Proximity_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4DD25F99382AD2828C2D023D57E20146 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 420F897114A9176D3681CA864C38D496 /* Foundation.framework */; };
+		5CA89E4655DFBE5E5255D958E0461CE5 /* Pods-novid20Proximity_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B13F8BB5D4DE42B7534AE4321F9DAA5C /* Pods-novid20Proximity_Tests-dummy.m */; };
+		63994AC61B7B988BB9257A2BF1956FB8 /* DiscoveredPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A5B1B83A2A4DF48060D54FC74E3AD6 /* DiscoveredPeripheral.swift */; };
+		64D175AE2F360879A60A96087D26659F /* PeripheralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49132E46604B86B6D18A5CED3EEACBEB /* PeripheralManager.swift */; };
+		661585E39AAE7D92E8F671C9730475B7 /* novid20Proximity-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 763C5B8AD358CEC2C8058F0A0E01C459 /* novid20Proximity-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		723E7BD8990016268250245EBDDDFDE8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23C3168D3E59E0DE4D69C46EE9CB696A /* UIKit.framework */; };
+		7DF166173877246AB17C017D558E8C8C /* Pods-novid20Proximity_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AB35B9E49182A2056A20FCDCDC912A7D /* Pods-novid20Proximity_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		925839B7527C6168A3EBF3AF9ED431AC /* Pods-novid20Proximity_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F6CD796216B4C35CF0613CF50009077A /* Pods-novid20Proximity_Example-dummy.m */; };
+		9F090CAC9D72095FDE68E0F01FAAE3C3 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81010A3C53A7E81DC3559B7710012542 /* LocationService.swift */; };
+		CAA3927B2C81FBD2B0FE1C17CE387456 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD73232F1DF0A6343D64B82AB3DC5D9 /* Defaults.swift */; };
+		D2231EAE7D01F113DBF0146F3A3FD4A8 /* SignificantLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5D1BA3A86E1A153083023B0662F761 /* SignificantLocationManager.swift */; };
+		DE688EF3876D0148BAC439267BE0F5F5 /* ProximityConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E421C88B79BD9A9D004A911B1755A5 /* ProximityConfig.swift */; };
+		E3AF9E7C6DEF74909B490ECC0D942CE1 /* CentralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF67D0DDAD1A02D5FA797C0DBEBA0070 /* CentralManager.swift */; };
+		E8D73176614CAA59A6F9BF728BE83FAE /* ProximityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67732EE99CFC02C2D2377A79A013B451 /* ProximityService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2E15322B53888B266EDD64AD40179459 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0CF19CB097D4D3142A966DF3BB30630;
+			remoteInfo = "Pods-novid20Proximity_Example";
+		};
+		60DDC2D44798C0B80205F1078DD490AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 35F653606067625A04DE9768BA4202BC;
+			remoteInfo = novid20Proximity;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0661FBDC5312A237539CE78E03CACCF7 /* Proximity.xcdatamodel */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcdatamodel; path = Proximity.xcdatamodel; sourceTree = "<group>"; };
+		08EA5DE53D7C30218713B33204A351BA /* Pods-novid20Proximity_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-novid20Proximity_Tests-umbrella.h"; sourceTree = "<group>"; };
+		09AE986EA54726AF1771AD1F3E200E05 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		11F372F0D1F74AE7B6F01D1436221861 /* Pods-novid20Proximity_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-novid20Proximity_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		17D400551B744C26FEBF8F891A503DAA /* novid20Proximity.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = novid20Proximity.modulemap; sourceTree = "<group>"; };
+		19A5B1B83A2A4DF48060D54FC74E3AD6 /* DiscoveredPeripheral.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DiscoveredPeripheral.swift; sourceTree = "<group>"; };
+		1B402EE9440D7C4C3E1ED5D998A305BE /* Pods-novid20Proximity_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-novid20Proximity_Tests.modulemap"; sourceTree = "<group>"; };
+		23C3168D3E59E0DE4D69C46EE9CB696A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		23E0101E6614AF9C79BC940D2148F9FC /* Pods-novid20Proximity_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-novid20Proximity_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2B17BC8C59A0BDE08335B70419E7C85B /* Pods-novid20Proximity_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-novid20Proximity_Example-Info.plist"; sourceTree = "<group>"; };
+		39169137A63479F2B454403F3D194136 /* novid20Proximity-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "novid20Proximity-Info.plist"; sourceTree = "<group>"; };
+		3E3FA1E745E4F2F23E6255B5C04E361C /* Pods_novid20Proximity_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_novid20Proximity_Tests.framework; path = "Pods-novid20Proximity_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		40012BC35C72F7DB3E7F8E821D328016 /* Pods-novid20Proximity_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-novid20Proximity_Tests-Info.plist"; sourceTree = "<group>"; };
+		420F897114A9176D3681CA864C38D496 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		49132E46604B86B6D18A5CED3EEACBEB /* PeripheralManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PeripheralManager.swift; sourceTree = "<group>"; };
+		49A981A8D39ADE11D67E074508974F53 /* Pods-novid20Proximity_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-novid20Proximity_Example.modulemap"; sourceTree = "<group>"; };
+		4B89610A532928B7CB9FCB5AC457BF41 /* Pods_novid20Proximity_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_novid20Proximity_Example.framework; path = "Pods-novid20Proximity_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5320E2F8568F45C1C28507ACD867599C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		5894BE86BED06DAB16D7CA2CA39A0891 /* Coredata.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Coredata.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Coredata.framework; sourceTree = DEVELOPER_DIR; };
+		5A1B5A27C10A49DDD2AD4022B742B214 /* Pods-novid20Proximity_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-novid20Proximity_Example.release.xcconfig"; sourceTree = "<group>"; };
+		66A233C4985AEE3A687F001D760282EE /* Pods-novid20Proximity_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-novid20Proximity_Example-frameworks.sh"; sourceTree = "<group>"; };
+		67732EE99CFC02C2D2377A79A013B451 /* ProximityService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProximityService.swift; sourceTree = "<group>"; };
+		700F917D71DEB8AAF8E63DD39002B191 /* Pods-novid20Proximity_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-novid20Proximity_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		763C5B8AD358CEC2C8058F0A0E01C459 /* novid20Proximity-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "novid20Proximity-umbrella.h"; sourceTree = "<group>"; };
+		7E8FA81C21B9E05799115365030D2913 /* novid20Proximity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = novid20Proximity.debug.xcconfig; sourceTree = "<group>"; };
+		81010A3C53A7E81DC3559B7710012542 /* LocationService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		82BF92B6C1D6FD7A18681B3B7A0B2C8A /* novid20Proximity-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "novid20Proximity-prefix.pch"; sourceTree = "<group>"; };
+		8A5D1BA3A86E1A153083023B0662F761 /* SignificantLocationManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SignificantLocationManager.swift; sourceTree = "<group>"; };
+		8EE5BE61FFDF05C95F0C6CB3776CF4F8 /* Database.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Database.swift; path = novid20Proximity/Classes/Database.swift; sourceTree = "<group>"; };
+		986894C6D30B291AF139DDEA2CDC6567 /* Pods-novid20Proximity_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-novid20Proximity_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		9C3B43C41746B0DC0AFED0E9C2FA81E5 /* novid20Proximity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = novid20Proximity.release.xcconfig; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A3C41CF7127DF774B55FB9BBF381EFF4 /* Pods-novid20Proximity_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-novid20Proximity_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A43D51F5F094FB3666710DCBEBDF034E /* Pods-novid20Proximity_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-novid20Proximity_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		AB35B9E49182A2056A20FCDCDC912A7D /* Pods-novid20Proximity_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-novid20Proximity_Example-umbrella.h"; sourceTree = "<group>"; };
+		B13F8BB5D4DE42B7534AE4321F9DAA5C /* Pods-novid20Proximity_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-novid20Proximity_Tests-dummy.m"; sourceTree = "<group>"; };
+		B1E421C88B79BD9A9D004A911B1755A5 /* ProximityConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProximityConfig.swift; sourceTree = "<group>"; };
+		BA34349D766CBA50AB7DD0D6148F60A2 /* novid20Proximity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = novid20Proximity.framework; path = novid20Proximity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAD73232F1DF0A6343D64B82AB3DC5D9 /* Defaults.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Defaults.swift; path = novid20Proximity/Classes/Defaults.swift; sourceTree = "<group>"; };
+		CED6F24D855ABDCC401E2BD65B4ED8BC /* novid20Proximity-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "novid20Proximity-dummy.m"; sourceTree = "<group>"; };
+		CF67D0DDAD1A02D5FA797C0DBEBA0070 /* CentralManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CentralManager.swift; sourceTree = "<group>"; };
+		F6CD796216B4C35CF0613CF50009077A /* Pods-novid20Proximity_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-novid20Proximity_Example-dummy.m"; sourceTree = "<group>"; };
+		FBD620D8D553E35D8483A99572DABD09 /* novid20Proximity.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = novid20Proximity.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		FEAA74212FE04EAA6A7DFFCFD970AA85 /* Pods-novid20Proximity_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-novid20Proximity_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		54924C45BA426A23092656CB9DE66F21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DD25F99382AD2828C2D023D57E20146 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98124FE21F3C5FFECA05D8BF8CE98BAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D1CA0FC404E5E0914D248E1F9C50C0A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD4B2898E46759055B7EB11311A0B135 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B91D55F149D0CBBC9C4CF127DEEB303 /* Coredata.framework in Frameworks */,
+				2A22706D66D5A1B57A654F06C2E9028A /* Foundation.framework in Frameworks */,
+				723E7BD8990016268250245EBDDDFDE8 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03C5C200A0787E300053CFA8F53CA094 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27B59D8A9A994CA2CBE4921E487FA394 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1122758D20997B1535C39B1285A2559B /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				81010A3C53A7E81DC3559B7710012542 /* LocationService.swift */,
+				8A5D1BA3A86E1A153083023B0662F761 /* SignificantLocationManager.swift */,
+			);
+			name = Location;
+			path = Location;
+			sourceTree = "<group>";
+		};
+		13E4BF33BD50B97C2E5904359C34CE79 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA34349D766CBA50AB7DD0D6148F60A2 /* novid20Proximity.framework */,
+				4B89610A532928B7CB9FCB5AC457BF41 /* Pods_novid20Proximity_Example.framework */,
+				3E3FA1E745E4F2F23E6255B5C04E361C /* Pods_novid20Proximity_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18B62C7519712AB2C65DCEB3C0BBC3E2 /* Pods-novid20Proximity_Example */ = {
+			isa = PBXGroup;
+			children = (
+				49A981A8D39ADE11D67E074508974F53 /* Pods-novid20Proximity_Example.modulemap */,
+				A3C41CF7127DF774B55FB9BBF381EFF4 /* Pods-novid20Proximity_Example-acknowledgements.markdown */,
+				986894C6D30B291AF139DDEA2CDC6567 /* Pods-novid20Proximity_Example-acknowledgements.plist */,
+				F6CD796216B4C35CF0613CF50009077A /* Pods-novid20Proximity_Example-dummy.m */,
+				66A233C4985AEE3A687F001D760282EE /* Pods-novid20Proximity_Example-frameworks.sh */,
+				2B17BC8C59A0BDE08335B70419E7C85B /* Pods-novid20Proximity_Example-Info.plist */,
+				AB35B9E49182A2056A20FCDCDC912A7D /* Pods-novid20Proximity_Example-umbrella.h */,
+				11F372F0D1F74AE7B6F01D1436221861 /* Pods-novid20Proximity_Example.debug.xcconfig */,
+				5A1B5A27C10A49DDD2AD4022B742B214 /* Pods-novid20Proximity_Example.release.xcconfig */,
+			);
+			name = "Pods-novid20Proximity_Example";
+			path = "Target Support Files/Pods-novid20Proximity_Example";
+			sourceTree = "<group>";
+		};
+		197F8867F62B6AAFB7D2EB9D696C4DDD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B0DF051BABB4EE9E9338C73CA4F25DF5 /* Proximity.xcdatamodeld */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		27B59D8A9A994CA2CBE4921E487FA394 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5894BE86BED06DAB16D7CA2CA39A0891 /* Coredata.framework */,
+				420F897114A9176D3681CA864C38D496 /* Foundation.framework */,
+				23C3168D3E59E0DE4D69C46EE9CB696A /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		6362773498FC3FC84096705826E90AC0 /* novid20Proximity */ = {
+			isa = PBXGroup;
+			children = (
+				8EE5BE61FFDF05C95F0C6CB3776CF4F8 /* Database.swift */,
+				CAD73232F1DF0A6343D64B82AB3DC5D9 /* Defaults.swift */,
+				77475E161E0FE51A2540B2F2F25BE996 /* Pod */,
+				74284CC3F9434EB8C877980F88A0DF09 /* Proximity Service */,
+				197F8867F62B6AAFB7D2EB9D696C4DDD /* Resources */,
+				997590851A257896F1D1D3FC78651339 /* Support Files */,
+			);
+			name = novid20Proximity;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		74284CC3F9434EB8C877980F88A0DF09 /* Proximity Service */ = {
+			isa = PBXGroup;
+			children = (
+				B1E421C88B79BD9A9D004A911B1755A5 /* ProximityConfig.swift */,
+				67732EE99CFC02C2D2377A79A013B451 /* ProximityService.swift */,
+				B34481E8A017275A8236714030AD27F9 /* Bluetooth */,
+				1122758D20997B1535C39B1285A2559B /* Location */,
+			);
+			name = "Proximity Service";
+			path = "novid20Proximity/Classes/Proximity Service";
+			sourceTree = "<group>";
+		};
+		77475E161E0FE51A2540B2F2F25BE996 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				09AE986EA54726AF1771AD1F3E200E05 /* LICENSE */,
+				FBD620D8D553E35D8483A99572DABD09 /* novid20Proximity.podspec */,
+				5320E2F8568F45C1C28507ACD867599C /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		997590851A257896F1D1D3FC78651339 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				17D400551B744C26FEBF8F891A503DAA /* novid20Proximity.modulemap */,
+				CED6F24D855ABDCC401E2BD65B4ED8BC /* novid20Proximity-dummy.m */,
+				39169137A63479F2B454403F3D194136 /* novid20Proximity-Info.plist */,
+				82BF92B6C1D6FD7A18681B3B7A0B2C8A /* novid20Proximity-prefix.pch */,
+				763C5B8AD358CEC2C8058F0A0E01C459 /* novid20Proximity-umbrella.h */,
+				7E8FA81C21B9E05799115365030D2913 /* novid20Proximity.debug.xcconfig */,
+				9C3B43C41746B0DC0AFED0E9C2FA81E5 /* novid20Proximity.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/novid20Proximity";
+			sourceTree = "<group>";
+		};
+		9E67165FDB6F36172317EEFA9B50B571 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6362773498FC3FC84096705826E90AC0 /* novid20Proximity */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		A7A2330A696CF506316E583433E33B37 /* Pods-novid20Proximity_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				1B402EE9440D7C4C3E1ED5D998A305BE /* Pods-novid20Proximity_Tests.modulemap */,
+				23E0101E6614AF9C79BC940D2148F9FC /* Pods-novid20Proximity_Tests-acknowledgements.markdown */,
+				700F917D71DEB8AAF8E63DD39002B191 /* Pods-novid20Proximity_Tests-acknowledgements.plist */,
+				B13F8BB5D4DE42B7534AE4321F9DAA5C /* Pods-novid20Proximity_Tests-dummy.m */,
+				40012BC35C72F7DB3E7F8E821D328016 /* Pods-novid20Proximity_Tests-Info.plist */,
+				08EA5DE53D7C30218713B33204A351BA /* Pods-novid20Proximity_Tests-umbrella.h */,
+				FEAA74212FE04EAA6A7DFFCFD970AA85 /* Pods-novid20Proximity_Tests.debug.xcconfig */,
+				A43D51F5F094FB3666710DCBEBDF034E /* Pods-novid20Proximity_Tests.release.xcconfig */,
+			);
+			name = "Pods-novid20Proximity_Tests";
+			path = "Target Support Files/Pods-novid20Proximity_Tests";
+			sourceTree = "<group>";
+		};
+		B34481E8A017275A8236714030AD27F9 /* Bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				CF67D0DDAD1A02D5FA797C0DBEBA0070 /* CentralManager.swift */,
+				19A5B1B83A2A4DF48060D54FC74E3AD6 /* DiscoveredPeripheral.swift */,
+				49132E46604B86B6D18A5CED3EEACBEB /* PeripheralManager.swift */,
+			);
+			name = Bluetooth;
+			path = Bluetooth;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				9E67165FDB6F36172317EEFA9B50B571 /* Development Pods */,
+				03C5C200A0787E300053CFA8F53CA094 /* Frameworks */,
+				13E4BF33BD50B97C2E5904359C34CE79 /* Products */,
+				E3C8761E45D6A80862464BE35254CFD5 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		E3C8761E45D6A80862464BE35254CFD5 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				18B62C7519712AB2C65DCEB3C0BBC3E2 /* Pods-novid20Proximity_Example */,
+				A7A2330A696CF506316E583433E33B37 /* Pods-novid20Proximity_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		56ABF39E6D8FF06679C22CAD82533E0F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45898C0FC40C44198649E211E0D1551F /* Pods-novid20Proximity_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91710B219FD148824DC65076DAD44B02 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DF166173877246AB17C017D558E8C8C /* Pods-novid20Proximity_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8B6B63A7B2B02806D84B159D774AE7A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				661585E39AAE7D92E8F671C9730475B7 /* novid20Proximity-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		35F653606067625A04DE9768BA4202BC /* novid20Proximity */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65D2AA61F023298D8ECFADD23834A400 /* Build configuration list for PBXNativeTarget "novid20Proximity" */;
+			buildPhases = (
+				B8B6B63A7B2B02806D84B159D774AE7A /* Headers */,
+				A98A485AAEF608C45C4EE3791262E0F9 /* Sources */,
+				AD4B2898E46759055B7EB11311A0B135 /* Frameworks */,
+				A07859EAF0D0EDEBB27F765D06110CCF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = novid20Proximity;
+			productName = novid20Proximity;
+			productReference = BA34349D766CBA50AB7DD0D6148F60A2 /* novid20Proximity.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9F0CAEA29B48C938FAE0AFC82F78CC98 /* Pods-novid20Proximity_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F38AB0F557BE49EDE12041F413149A51 /* Build configuration list for PBXNativeTarget "Pods-novid20Proximity_Tests" */;
+			buildPhases = (
+				56ABF39E6D8FF06679C22CAD82533E0F /* Headers */,
+				BA6D1796AD014573B29EFA937E359E9D /* Sources */,
+				54924C45BA426A23092656CB9DE66F21 /* Frameworks */,
+				183A2FD8283CB5D36CBC92C5AD47B309 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B9AEE8DBC4087E62DEA1D06E99F79953 /* PBXTargetDependency */,
+			);
+			name = "Pods-novid20Proximity_Tests";
+			productName = "Pods-novid20Proximity_Tests";
+			productReference = 3E3FA1E745E4F2F23E6255B5C04E361C /* Pods_novid20Proximity_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B0CF19CB097D4D3142A966DF3BB30630 /* Pods-novid20Proximity_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAA2AD0AF2075F2B2B128216628B152E /* Build configuration list for PBXNativeTarget "Pods-novid20Proximity_Example" */;
+			buildPhases = (
+				91710B219FD148824DC65076DAD44B02 /* Headers */,
+				75B82A780D5E1FDCF6A21872B3EF0556 /* Sources */,
+				98124FE21F3C5FFECA05D8BF8CE98BAD /* Frameworks */,
+				AFDB684180DC6C5C65E5AA3BE5462FE9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				403988D623B86C8DD363BDDB6C802882 /* PBXTargetDependency */,
+			);
+			name = "Pods-novid20Proximity_Example";
+			productName = "Pods-novid20Proximity_Example";
+			productReference = 4B89610A532928B7CB9FCB5AC457BF41 /* Pods_novid20Proximity_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 13E4BF33BD50B97C2E5904359C34CE79 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				35F653606067625A04DE9768BA4202BC /* novid20Proximity */,
+				B0CF19CB097D4D3142A966DF3BB30630 /* Pods-novid20Proximity_Example */,
+				9F0CAEA29B48C938FAE0AFC82F78CC98 /* Pods-novid20Proximity_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		183A2FD8283CB5D36CBC92C5AD47B309 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A07859EAF0D0EDEBB27F765D06110CCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFDB684180DC6C5C65E5AA3BE5462FE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		75B82A780D5E1FDCF6A21872B3EF0556 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				925839B7527C6168A3EBF3AF9ED431AC /* Pods-novid20Proximity_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A98A485AAEF608C45C4EE3791262E0F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3AF9E7C6DEF74909B490ECC0D942CE1 /* CentralManager.swift in Sources */,
+				374AEF2B663526E1907B6D5BC5534D0F /* Database.swift in Sources */,
+				CAA3927B2C81FBD2B0FE1C17CE387456 /* Defaults.swift in Sources */,
+				63994AC61B7B988BB9257A2BF1956FB8 /* DiscoveredPeripheral.swift in Sources */,
+				9F090CAC9D72095FDE68E0F01FAAE3C3 /* LocationService.swift in Sources */,
+				29673B523DB2B5038F7642101F408AD4 /* novid20Proximity-dummy.m in Sources */,
+				64D175AE2F360879A60A96087D26659F /* PeripheralManager.swift in Sources */,
+				3B9859FFF8EE85B7E8C52DBD2C9A8BBB /* Proximity.xcdatamodeld in Sources */,
+				DE688EF3876D0148BAC439267BE0F5F5 /* ProximityConfig.swift in Sources */,
+				E8D73176614CAA59A6F9BF728BE83FAE /* ProximityService.swift in Sources */,
+				D2231EAE7D01F113DBF0146F3A3FD4A8 /* SignificantLocationManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA6D1796AD014573B29EFA937E359E9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CA89E4655DFBE5E5255D958E0461CE5 /* Pods-novid20Proximity_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		403988D623B86C8DD363BDDB6C802882 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = novid20Proximity;
+			target = 35F653606067625A04DE9768BA4202BC /* novid20Proximity */;
+			targetProxy = 60DDC2D44798C0B80205F1078DD490AF /* PBXContainerItemProxy */;
+		};
+		B9AEE8DBC4087E62DEA1D06E99F79953 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-novid20Proximity_Example";
+			target = B0CF19CB097D4D3142A966DF3BB30630 /* Pods-novid20Proximity_Example */;
+			targetProxy = 2E15322B53888B266EDD64AD40179459 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2212791FAF2DAC7C8C7930C654FBC2C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C3B43C41746B0DC0AFED0E9C2FA81E5 /* novid20Proximity.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/novid20Proximity/novid20Proximity-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/novid20Proximity/novid20Proximity-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/novid20Proximity/novid20Proximity.modulemap";
+				PRODUCT_MODULE_NAME = novid20Proximity;
+				PRODUCT_NAME = novid20Proximity;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		257497152829C177993B5EC99C1D227A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		622D24F7E4AA507354F1E6F138013224 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A1B5A27C10A49DDD2AD4022B742B214 /* Pods-novid20Proximity_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-novid20Proximity_Example/Pods-novid20Proximity_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-novid20Proximity_Example/Pods-novid20Proximity_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8404F0D0AF8EAAD8B26134DD9CBB6B78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11F372F0D1F74AE7B6F01D1436221861 /* Pods-novid20Proximity_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-novid20Proximity_Example/Pods-novid20Proximity_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-novid20Proximity_Example/Pods-novid20Proximity_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BC9B806854514EB43A409811CB0BECBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEAA74212FE04EAA6A7DFFCFD970AA85 /* Pods-novid20Proximity_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-novid20Proximity_Tests/Pods-novid20Proximity_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-novid20Proximity_Tests/Pods-novid20Proximity_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D4378B4F8142CB2741F937DA8A4B543D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E8FA81C21B9E05799115365030D2913 /* novid20Proximity.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/novid20Proximity/novid20Proximity-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/novid20Proximity/novid20Proximity-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/novid20Proximity/novid20Proximity.modulemap";
+				PRODUCT_MODULE_NAME = novid20Proximity;
+				PRODUCT_NAME = novid20Proximity;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D9EED33F49C65707D8637FD48192C1C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A43D51F5F094FB3666710DCBEBDF034E /* Pods-novid20Proximity_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-novid20Proximity_Tests/Pods-novid20Proximity_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-novid20Proximity_Tests/Pods-novid20Proximity_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DD8F832993327D1DD8046C3CBCBD97CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD8F832993327D1DD8046C3CBCBD97CD /* Debug */,
+				257497152829C177993B5EC99C1D227A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65D2AA61F023298D8ECFADD23834A400 /* Build configuration list for PBXNativeTarget "novid20Proximity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4378B4F8142CB2741F937DA8A4B543D /* Debug */,
+				2212791FAF2DAC7C8C7930C654FBC2C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAA2AD0AF2075F2B2B128216628B152E /* Build configuration list for PBXNativeTarget "Pods-novid20Proximity_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8404F0D0AF8EAAD8B26134DD9CBB6B78 /* Debug */,
+				622D24F7E4AA507354F1E6F138013224 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F38AB0F557BE49EDE12041F413149A51 /* Build configuration list for PBXNativeTarget "Pods-novid20Proximity_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC9B806854514EB43A409811CB0BECBA /* Debug */,
+				D9EED33F49C65707D8637FD48192C1C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B0DF051BABB4EE9E9338C73CA4F25DF5 /* Proximity.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0661FBDC5312A237539CE78E03CACCF7 /* Proximity.xcdatamodel */,
+			);
+			currentVersion = 0661FBDC5312A237539CE78E03CACCF7 /* Proximity.xcdatamodel */;
+			name = Proximity.xcdatamodeld;
+			path = novid20Proximity/Classes/Proximity.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

@@ -1,0 +1,6 @@
+framework module Pods_novid20Proximity_Tests {
+  umbrella header "Pods-novid20Proximity_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

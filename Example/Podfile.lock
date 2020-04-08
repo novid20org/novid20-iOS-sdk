@@ -1,0 +1,16 @@
+PODS:
+  - novid20Proximity (0.1.0)
+
+DEPENDENCIES:
+  - novid20Proximity (from `../`)
+
+EXTERNAL SOURCES:
+  novid20Proximity:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  novid20Proximity: dc4c35aa9d791f1b823990ac3f994fcd606c7a5a
+
+PODFILE CHECKSUM: 2ce41010d67aef7daca5f7ce6090c6cd5ef2bd87
+
+COCOAPODS: 1.9.1

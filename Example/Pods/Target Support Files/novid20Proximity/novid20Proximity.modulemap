@@ -1,0 +1,6 @@
+framework module novid20Proximity {
+  umbrella header "novid20Proximity-umbrella.h"
+
+  export *
+  module * { export * }
+}
