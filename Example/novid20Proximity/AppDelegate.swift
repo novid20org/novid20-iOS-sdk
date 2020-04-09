@@ -9,6 +9,12 @@
 import UIKit
 import novid20Proximity
 import CoreLocation
+import CoreBluetooth
+
+let GeorgiaAppUUID = CBUUID(string: "de65c482-7a45-11ea-bc55-0242ac130003")
+let GeorgiaServiceUUID = CBUUID(string: "e9143e04-7a45-11ea-bc55-0242ac130003")
+let GeorgiaCharacteristicUUID = CBUUID(string: "f0626dc0-7a45-11ea-bc55-0242ac130003")
+let GeorgiaAppUserIDPrefix = "nvSDK-"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,9 +28,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 		self.window!.makeKeyAndVisible()
 
-		let _ = Database.shared
+		let sdkConfig = ProximitySDKConfiguration(appUUID: GeorgiaAppUUID, serviceUUID: GeorgiaServiceUUID, characteristicUUID: GeorgiaCharacteristicUUID, appUserIDPrefix: GeorgiaAppUserIDPrefix)
+		ProximityService.shared.set(config: sdkConfig)
 
-		userID = "\(ProximityConfig.AppUserIDPrefix)123456"
+		userID = "\(sdkConfig.appUserIDPrefix)123456"
 
 		if let id = userID {
 			self.window!.rootViewController = ProximityViewController(userID: id)

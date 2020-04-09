@@ -10,11 +10,10 @@ import CoreData
 import novid20Proximity
 import CoreLocation
 
-public class ProximityViewController: UIViewController, NSFetchedResultsControllerDelegate {
+public class ProximityViewController: UIViewController {
     
 	@IBOutlet weak var peripheralsTableView: UITableView!
 	@IBOutlet weak var userIDLabel: UILabel!
-	@IBOutlet weak var tokenField: UITextField!
 
 	var peripherals = [Peripheral]()
 
@@ -43,7 +42,6 @@ public class ProximityViewController: UIViewController, NSFetchedResultsControll
 		manager.requestAlwaysAuthorization()
 
 		userIDLabel.text = "UserID: \(userID)"
-		tokenField.delegate = self
 		peripheralsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "DefaultCell")
     }
 
@@ -51,20 +49,6 @@ public class ProximityViewController: UIViewController, NSFetchedResultsControll
 		super.viewDidAppear(animated)
 
 		ProximityService.shared.setCentral(delegate: self)
-		if let token = Defaults.getDevicetoken() {
-			tokenField.text = token
-		}
-	}
-
-	public func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-		peripheralsTableView.reloadData()
-	}
-	public func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-		print("x")
-	}
-
-	public func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
-		print("y")
 	}
 }
 
@@ -149,20 +133,10 @@ extension ProximityViewController: CentralManagerDelegate {
 
 //MARK:- NSFetchedResultsControllerDelegate
 
-//extension ProximityViewController: NSFetchedResultsControllerDelegate {
+extension ProximityViewController: NSFetchedResultsControllerDelegate {
 
+	public func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+		peripheralsTableView.reloadData()
+	}
 
-
-//    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-//        peripheralsTableView.beginUpdates()
-//    }
-
-//	public func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-//		<#code#>
-//	}
-
-//	public func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-//		peripheralsTableView.reloadData()
-//	}
-
-//}
+}
