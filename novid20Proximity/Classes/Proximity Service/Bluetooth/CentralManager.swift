@@ -28,7 +28,7 @@ class CentralManager: NSObject {
 
 	weak var delegate: CentralManagerDelegate?
 
-	let database = Database()
+	let database = Database.shared
 	var appState: AppState = .background
 
 	//MARK:- init
