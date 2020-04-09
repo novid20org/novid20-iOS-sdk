@@ -22,7 +22,7 @@ public class Database {
 	private var managedObjectContext: NSManagedObjectContext?
 
 
-	public init() {
+	private init() {
 	  managedObjectContext = persistentContainer?.viewContext
 
 	  guard managedObjectContext != nil else {
