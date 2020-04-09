@@ -15,7 +15,7 @@ public class ProximityService {
 	private var centralManager: CentralManager?
 	private var peripheralManager: PeripheralManager?
 	private var locationService: LocationService!
-
+	var userID: String?
 
 	public init(){
 
@@ -23,24 +23,29 @@ public class ProximityService {
 	}
 
 	public func startIfPossible(userID: String){
+		if self.userID == nil {
+			self.userID = userID
+		}
 		if Defaults.getServiceState() {
 			start(userID: userID)
 		}
 	}
 
 	public func start(userID: String){
-
+		if self.userID == nil {
+			self.userID = userID
+		}
 		Defaults.set(serviceState: true)
 
 		if centralManager == nil {
 			centralManager = CentralManager()
 		}
 		if peripheralManager == nil {
-			peripheralManager = PeripheralManager()
+			peripheralManager = PeripheralManager(userID: userID)
 
 		}
 		locationService.startLocationListening()
-		peripheralManager?.startBroadcasting(userID: userID)
+		peripheralManager?.startBroadcasting()
 		centralManager?.startScanning()
 	}
 
@@ -50,6 +55,13 @@ public class ProximityService {
 		peripheralManager?.stopBroadcasting()
 		centralManager?.stopScanning()
 		locationService.stopLocationListening()
+	}
+
+	public func set(config: ProximitySDKConfiguration){
+		ProximityConfig.AppUUID = config.appUUID
+		ProximityConfig.ServiceUUID = config.serviceUUID
+		ProximityConfig.CharacteristicUUID = config.characteristicUUID
+		ProximityConfig.AppUserIDPrefix = config.appUserIDPrefix
 	}
 
 	public func setCentral(delegate: CentralManagerDelegate){
@@ -64,7 +76,7 @@ public class ProximityService {
 
 extension ProximityService: LocationServiceDelegate {
 	func didExitGeofence() {
-		if let userID = Defaults.getUserID() {
+		if let userID = self.userID {
 			startIfPossible(userID: userID)
 		}
 		print("Exit")

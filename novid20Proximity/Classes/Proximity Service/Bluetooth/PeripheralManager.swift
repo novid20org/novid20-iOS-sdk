@@ -16,17 +16,16 @@ class PeripheralManager: NSObject {
 
     var peripheralManager: CBPeripheralManager!
     var region: CLBeaconRegion!
-	var userID: String = "No user id set"
+	var userID: String
 
-	override init() {
+	init(userID: String) {
+		self.userID = userID
 		super.init()
         peripheralManager = CBPeripheralManager(delegate: self, queue: nil, options: nil)
-		userID = Defaults.getUserID() ?? "No user id set"
 	}
 
 
-	func startBroadcasting(userID: String) {
-		self.userID = userID
+	func startBroadcasting() {
 		if peripheralManager.state == .poweredOn {
 			if !peripheralManager.isAdvertising {
 				start(userID: self.userID)

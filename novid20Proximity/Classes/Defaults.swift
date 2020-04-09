@@ -14,12 +14,7 @@ public var AppLanguage = "ka"
 public class Defaults {
 
 	enum Keys: String {
-		case defaultsPrefix = "novid20.mobile."
-		case customAppLanguage
-		case userID
-		case deviceToken
-        case firebaseUID
-        case firebaseToken
+		case defaultsPrefix = "novid20.sdk."
 		case serviceStateOff
 		case lastTriggerGeofenceNotification
 		case getGeofenceRegion
@@ -28,65 +23,6 @@ public class Defaults {
 			return Keys.defaultsPrefix.rawValue + self.rawValue
 		}
 	}
-
-	//MARK:- Language
-	public static func getAppLanguage() -> String? {
-		if let id = UserDefaults.standard.string(forKey: Keys.customAppLanguage.value) {
-			return id
-		}
-		return nil
-	}
-
-	public static func set(appLangauge: String){
-		AppLanguage = appLangauge
-		UserDefaults.standard.set(appLangauge, forKey: Keys.customAppLanguage.value)
-	}
-
-	//MARK:- Auth
-	public static func getUserID() -> String? {
-		if let id = UserDefaults.standard.string(forKey: Keys.userID.value) {
-			return id
-		}
-		return nil
-	}
-
-	public static func set(userID: String){
-		UserDefaults.standard.set(userID, forKey: Keys.userID.value)
-	}
-
-	public static func getDevicetoken() -> String? {
-        if let token = UserDefaults.standard.string(forKey: Keys.deviceToken.value) {
-            return token
-        }
-        return nil
-    }
-
-    public static func set(deviceToken: String){
-        UserDefaults.standard.set(deviceToken, forKey: Keys.deviceToken.value)
-    }
-
-    public static func getFirebaseUID() -> String? {
-        if let token = UserDefaults.standard.string(forKey: Keys.firebaseUID.value) {
-            return token
-        }
-        return nil
-    }
-
-	public static func getFirebaseToken() -> String? {
-		 if let token = UserDefaults.standard.string(forKey: Keys.firebaseToken.value) {
-			 return token
-		 }
-		 return nil
-	 }
-
-    public static func set(firebaseUID: String){
-        UserDefaults.standard.set(firebaseUID, forKey: Keys.firebaseUID.value)
-    }
-
-	public static func set(firebaseToken: String){
-		 UserDefaults.standard.set(firebaseToken, forKey: Keys.firebaseToken.value)
-	 }
-
 
 	//MARK:- Service
 
