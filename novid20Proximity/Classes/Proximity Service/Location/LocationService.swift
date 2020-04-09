@@ -202,17 +202,16 @@ extension LocationService: CLLocationManagerDelegate {
 
 		if let lastTrigger = geofenceLastTrigger {
 			if now.timeIntervalSince(lastTrigger) > GEOFENCE_NOTIFICATION_INTERVAL_LIMIT {
-				//NotificationService.shared.sendLocalNotification(title: AppLocal.default[.label_geofenceNotificationTitle], body: AppLocal.default[.label_geofenceNotificationText])
+				delegate?.didExitGeofence()
 				geofenceLastTrigger = now
 			}
 		}
 		else {
-			//NotificationService.shared.sendLocalNotification(title: AppLocal.default[.label_geofenceNotificationTitle], body: AppLocal.default[.label_geofenceNotificationText])
+			delegate?.didExitGeofence()
 			geofenceLastTrigger = now
 		}
 
 		geofenceUserLocation(identifier: .userMovement)
-		delegate?.didExitGeofence()
 	}
 
 	public func locationManager(_: CLLocationManager, didEnterRegion region: CLRegion) {
