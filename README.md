@@ -1,10 +1,9 @@
-<p align="center">
-  <img width="400px" src="https://novid-assets.s3.eu-central-1.amazonaws.com/media/logo/novid20-logo.svg"/>
-</p>
-
 # NOVID20 iOS SDK
 
 This is the source code of the SDK powering the NOVID20 iOS apps. 
+
+You can customise your own Advertised userID and services by setting the ProximitySDKConfiguration.
+UserIDs must be between 9 to 24 characters only.
 
 More info: [NOVID20.org](https://novid20.org)
 
