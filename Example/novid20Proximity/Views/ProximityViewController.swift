@@ -38,8 +38,6 @@ public class ProximityViewController: UIViewController {
 	override public func viewDidLoad() {
         super.viewDidLoad()
 
-		let manager =  CLLocationManager()
-		manager.requestAlwaysAuthorization()
 
 		userIDLabel.text = "UserID: \(userID)"
 		peripheralsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "DefaultCell")
@@ -47,6 +45,11 @@ public class ProximityViewController: UIViewController {
 
 	override public func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
+
+		if CLLocationManager.authorizationStatus() == .notDetermined {
+			let manager =  CLLocationManager()
+			manager.requestAlwaysAuthorization()
+		}
 
 		ProximityService.shared.setCentral(delegate: self)
 	}
