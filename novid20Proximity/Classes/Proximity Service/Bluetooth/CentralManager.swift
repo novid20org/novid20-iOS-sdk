@@ -93,7 +93,7 @@ class CentralManager: NSObject {
 	}
 
 	private func isAnApp(userID: String) -> Bool {
-		return userID.hasPrefix(ProximityConfig.AppUserIDPrefix)
+		return userID.hasPrefix(ProximityConfig.AppUserIDPrefix) && userID.count > 8
 	}
 
 	/*

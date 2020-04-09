@@ -26,7 +26,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 
-		self.window!.makeKeyAndVisible()
 
 		let sdkConfig = ProximitySDKConfiguration(appUUID: GeorgiaAppUUID, serviceUUID: GeorgiaServiceUUID, characteristicUUID: GeorgiaCharacteristicUUID, appUserIDPrefix: GeorgiaAppUserIDPrefix)
 		ProximityService.shared.set(config: sdkConfig)
@@ -36,9 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		if let id = userID {
 			self.window!.rootViewController = ProximityViewController(userID: id)
 		}
-
-
-
+		self.window!.makeKeyAndVisible()
         return true
     }
 
