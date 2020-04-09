@@ -15,6 +15,8 @@ public class ProximityService {
 	private var centralManager: CentralManager?
 	private var peripheralManager: PeripheralManager?
 	private var locationService: LocationService!
+
+	var geofenceTriggerCallback: (()->())?
 	var userID: String?
 
 	public init(){
@@ -68,6 +70,10 @@ public class ProximityService {
 		centralManager?.delegate = delegate
 	}
 
+	public func setGeofenceTrigger(callback: @escaping ()->()){
+		geofenceTriggerCallback = callback
+	}
+
 	public func prepareBLEForSendingData(){
 		centralManager?.cleanupForSendingData()
 	}
@@ -79,7 +85,7 @@ extension ProximityService: LocationServiceDelegate {
 		if let userID = self.userID {
 			startIfPossible(userID: userID)
 		}
-		print("Exit")
+		geofenceTriggerCallback?()
 	}
 
 

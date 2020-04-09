@@ -15,6 +15,8 @@ public protocol CentralManagerDelegate: class {
 	func didUpdateDiscovered(peripherals: [Peripheral])
 }
 
+
+
 class CentralManager: NSObject {
 
     var peripherals = [Peripheral]()

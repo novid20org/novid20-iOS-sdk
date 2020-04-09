@@ -12,7 +12,6 @@ import CoreLocation
 protocol LocationServiceDelegate: class {
 	func didUpdateLocation()
 	func didExitGeofence()
-	func isBroadcasting() -> Bool
 }
 
 class LocationService: NSObject {
