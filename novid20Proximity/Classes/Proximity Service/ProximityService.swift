@@ -22,6 +22,8 @@ public class ProximityService {
 	public init(){
 
 		locationService = LocationService(delegate: self)
+		Database.shared.deleteOldLocations()
+		Database.shared.deleteOldBLEConnections()
 	}
 
 	public func startIfPossible(userID: String){
