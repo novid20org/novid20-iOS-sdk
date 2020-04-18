@@ -10,17 +10,20 @@ import Foundation
 import CoreBluetooth
 
 public struct ProximitySDKConfiguration {
-	public init(appUUID: CBUUID, serviceUUID: CBUUID, characteristicUUID: CBUUID, appUserIDPrefix: String){
+	public init(appUUID: CBUUID, serviceUUID: CBUUID, characteristicUUID: CBUUID, appUserIDPrefix: String, appUserIDLengthCount: Int){
 		
 		self.appUUID = appUUID
 		self.serviceUUID = serviceUUID
 		self.characteristicUUID = characteristicUUID
 		self.appUserIDPrefix = appUserIDPrefix
+		self.appUserIDLengthCount = appUserIDLengthCount
 	}
 	public var appUUID: CBUUID
 	public var serviceUUID: CBUUID
 	public var characteristicUUID: CBUUID
 	public var appUserIDPrefix: String
+	public var appUserIDLengthCount: Int
+
 }
 
 internal struct ProximityConfig {
