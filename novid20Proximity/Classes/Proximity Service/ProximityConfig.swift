@@ -28,4 +28,5 @@ internal struct ProximityConfig {
 	public static var ServiceUUID = CBUUID(string: "e9143e04-7a45-11ea-bc55-0242ac130003")
 	public static var CharacteristicUUID = CBUUID(string: "f0626dc0-7a45-11ea-bc55-0242ac130003")
 	public static var AppUserIDPrefix = "nvSDK-"
+	public static var AppUserIDLLengthCount = 23
 }
