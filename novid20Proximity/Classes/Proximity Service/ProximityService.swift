@@ -66,6 +66,7 @@ public class ProximityService {
 		ProximityConfig.ServiceUUID = config.serviceUUID
 		ProximityConfig.CharacteristicUUID = config.characteristicUUID
 		ProximityConfig.AppUserIDPrefix = config.appUserIDPrefix
+		ProximityConfig.AppUserIDLLengthCount = config.appUserIDLengthCount
 	}
 
 	public func setCentral(delegate: CentralManagerDelegate){
