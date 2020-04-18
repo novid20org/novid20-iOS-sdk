@@ -26,7 +26,7 @@ public class Database {
 	  managedObjectContext = persistentContainer?.viewContext
 
 	  guard managedObjectContext != nil else {
-		preconditionFailure("Cann't get right managed object context.")
+		preconditionFailure("Can't get right managed object context.")
 	  }
 	}
 

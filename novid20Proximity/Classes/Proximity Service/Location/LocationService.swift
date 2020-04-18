@@ -27,14 +27,14 @@ class LocationService: NSObject {
 
 	private var geofenceRegion: CLRegion? {
 		didSet {
-			Defaults.set(getGeofenceRegion: geofenceRegion)
+			ProximityService.Defaults.set(getGeofenceRegion: geofenceRegion)
 		}
 	}
 
 	private var geofenceLastTrigger: Date? {
 		didSet {
 			if let trigger = geofenceLastTrigger {
-				Defaults.set(lastTriggerGeofenceNotification: trigger)
+				ProximityService.Defaults.set(lastTriggerGeofenceNotification: trigger)
 			}
 		}
 	}
@@ -45,7 +45,7 @@ class LocationService: NSObject {
 
 	weak var delegate: LocationServiceDelegate?
 
-    private let GEOFENCE_NOTIFICATION_INTERVAL_LIMIT: Double = 7200 //sec = 1h
+    private let GEOFENCE_NOTIFICATION_INTERVAL_LIMIT: Double = 7200 //sec = 2h
     private let GEOFENCE_RADIUS: Double = 300.0 // meters
     private let DISTANCE_FOR_LOCATION_UPDATE: Double = 20.0 // meters
     private var lastLocation: CLLocation?
@@ -57,8 +57,8 @@ class LocationService: NSObject {
 		super.init()
 		self.delegate = delegate
 		significantLocationManager = SignificantLocationManager(delegate: self)
-		geofenceRegion = Defaults.getGeofenceRegion()
-		geofenceLastTrigger = Defaults.getLastTriggerGeofenceNotification()
+		geofenceRegion = ProximityService.Defaults.getGeofenceRegion()
+		geofenceLastTrigger = ProximityService.Defaults.getLastTriggerGeofenceNotification()
 	}
 
 	func startLocationListening(){
