@@ -11,10 +11,11 @@ import novid20Proximity
 import CoreLocation
 import CoreBluetooth
 
-let GeorgiaAppUUID = CBUUID(string: "de65c482-7a45-11ea-bc55-0242ac130003")
-let GeorgiaServiceUUID = CBUUID(string: "e9143e04-7a45-11ea-bc55-0242ac130003")
-let GeorgiaCharacteristicUUID = CBUUID(string: "f0626dc0-7a45-11ea-bc55-0242ac130003")
-let GeorgiaAppUserIDPrefix = "nvSDK-"
+let DemoAppUUID = CBUUID(string: "de65c482-7a45-11ea-bc55-0242ac130003")
+let DemoServiceUUID = CBUUID(string: "e9143e04-7a45-11ea-bc55-0242ac130003")
+let DemoCharacteristicUUID = CBUUID(string: "f0626dc0-7a45-11ea-bc55-0242ac130003")
+let DemoAppUserIDPrefix = "nvSDK-"
+let DemoAppUserIDLengthCount = 12
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -27,10 +28,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
 
 
-		let sdkConfig = ProximitySDKConfiguration(appUUID: GeorgiaAppUUID, serviceUUID: GeorgiaServiceUUID, characteristicUUID: GeorgiaCharacteristicUUID, appUserIDPrefix: GeorgiaAppUserIDPrefix)
+		let sdkConfig = ProximitySDKConfiguration(appUUID: DemoAppUUID, serviceUUID: DemoServiceUUID, characteristicUUID: DemoCharacteristicUUID, appUserIDPrefix: DemoAppUserIDPrefix, appUserIDLengthCount: DemoAppUserIDLengthCount)
 		ProximityService.shared.set(config: sdkConfig)
 
 		userID = "\(sdkConfig.appUserIDPrefix)123456"
+
+		if userID?.count != DemoAppUserIDLengthCount {
+			assertionFailure("UserID length should be equal DemoAppUserIDLengthCount")
+		}
 
 		if let id = userID {
 			self.window!.rootViewController = ProximityViewController(userID: id)
